@@ -3,11 +3,9 @@ body {
   background-color: #f7ead9;
 }
 
-h2,
 h3 {
   font-family: Raleway, sans-serif;
-  margin: 0;
-  margin: 0 1rem;
+  margin: 0.25rem 0;
 }
 
 button {
@@ -20,26 +18,45 @@ button {
 /* HEADER */
 header {
   background: #e2af77;
-  padding: 0.7rem 0;
+  padding: 0.7rem 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* NEW ENTRY FORM */
-label {
-  margin: 1rem;
+h2 {
+  margin-top: 0;
+}
+
+img,
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 input,
 textarea {
-  width: 95%;
-  margin: 0 1rem;
+  padding: 10px;
+  outline: none;
+  border: 1.5px solid rgb(186, 186, 186);
 }
 
 textarea {
   resize: none;
 }
 
-/* MAIN */
-img {
-  width: 95%;
-  margin: 1rem;
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #e2af77;
+  border-radius: 3px;
 }
+
+.save-btn {
+  padding: 3px 10px;
+  border-radius: 3px;
+  text-align: right;
+}
+
+/* MAIN */
