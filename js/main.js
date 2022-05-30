@@ -28,6 +28,4 @@ function saveEntryInfo(event) {
 
   $formImage.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
-
-  event.preventDefault();
 }

@@ -32,14 +32,14 @@ img,
 input,
 textarea {
   width: 100%;
-  margin-bottom: 1rem;
+  margin: 0.2rem 0 1rem;
 }
 
 input,
 textarea {
   padding: 10px;
   outline: none;
-  border: 1.5px solid rgb(186, 186, 186);
+  border: 2px solid rgb(186, 186, 186);
 }
 
 textarea {
@@ -54,6 +54,7 @@ textarea:focus {
 }
 
 .save-btn {
+  float: right;
   padding: 3px 10px;
   border-radius: 3px;
   text-align: right;
