@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Journal</title>
   <link rel="icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400" rel="stylesheet">
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -16,27 +17,32 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>Code Journal
-  </header>
+  <header><h3>Code Journal</h3></header>
   <main>
     <div data-view="entry-form">
       <form action="">
         <div class="row">
           <div class="column-full">
             <h2>New Entry</h2>
-            <img src="" alt="entry-photo">
           </div>
-          <div class="column-full">
-            <label for="title">Title<input type="text" id="title"></label>
+          <div class="column-half">
+            <img src="images/placeholder-image-square.jpg" alt="entry-photo">
           </div>
-          <div class="column-full">
-            <label for="phot-url">Photo URL<input type="text" id="photo-url"></label>
-          </div>
-          <div class="column-full">
-            <label for="notes">Notes<input type="text" id="notes"></label>
-            <button type="submit">SAVE</button></form>
+          <div class="column-half">
+            <label for="title">Title</label>
+            <input type="text" id="title">
+            <label for="phot-url">Photo URL</label>
+            <input type="text" id="photo-url">
           </div>
         </div>
+        <div class="row">
+          <div class="column-full">
+            <label for="notes">Notes</label>
+            <textarea rows="4" id="notes"></textarea>
+            <button type="submit">SAVE</button>
+          </div>
+        </div>
+      </form>
     </div>
   </main>
   <script src="js/data.js"></script>
