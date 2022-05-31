@@ -22,32 +22,33 @@
     <h3>Code Journal</h3>
   </header>
   <main>
-
-    <!-- FORM -->
-    <div data-view="entry-form">
-      <form action="">
-        <div class="row">
-          <div class="column-full">
-            <h2>New Entry</h2>
+    <div class="container">
+      <!-- FORM -->
+      <div data-view="entry-form">
+        <form action="">
+          <div class="row">
+            <div class="column-full">
+              <h2>New Entry</h2>
+            </div>
+            <div class="column-half">
+              <img src="images/placeholder-image-square.jpg" alt="entry-photo" class="form-img">
+            </div>
+            <div class="column-half">
+              <label for="title">Title</label>
+              <input type="text" id="title" required="required">
+              <label for="phot-url">Photo URL</label>
+              <input type="text" id="photo-url" required="required">
+            </div>
           </div>
-          <div class="column-half">
-            <img src="images/placeholder-image-square.jpg" alt="entry-photo" class="form-img">
+          <div class="row">
+            <div class="column-full">
+              <label for="notes">Notes</label>
+              <textarea rows="4" class="notes-text" id="notes" required="required"></textarea>
+              <input class="save-btn" type="submit" value="SAVE">
+            </div>
           </div>
-          <div class="column-half">
-            <label for="title">Title</label>
-            <input type="text" id="title" required="required">
-            <label for="phot-url">Photo URL</label>
-            <input type="text" id="photo-url" required="required">
-          </div>
-        </div>
-        <div class="row">
-          <div class="column-full">
-            <label for="notes">Notes</label>
-            <textarea rows="4" class="notes-text" id="notes" required="required"></textarea>
-            <input class="save-btn" type="submit" value="SAVE">
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </main>
   <script src="js/data.js"></script>

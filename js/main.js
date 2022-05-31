@@ -10,11 +10,10 @@ function updatePhoto(event) {
   }
 }
 
-var $saveEntry = document.querySelector('.save-btn');
 var $entryTitle = document.querySelector('#title');
 var $entryNotes = document.querySelector('#notes');
 
-$saveEntry.addEventListener('click', saveEntryInfo);
+$form.addEventListener('submit', saveEntryInfo);
 
 function saveEntryInfo(event) {
   var currentEntry = {};
@@ -28,6 +27,7 @@ function saveEntryInfo(event) {
 
   $formImage.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
+
 }
 
 window.addEventListener('beforeunload', function () {
