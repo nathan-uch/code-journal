@@ -1,3 +1,5 @@
+/* global data */
+
 var $form = document.forms[0];
 var $photoUrl = document.querySelector('#photo-url');
 var $formImage = document.querySelector('.form-img');
@@ -16,20 +18,21 @@ var $entryNotes = document.querySelector('#notes');
 $form.addEventListener('submit', saveEntryInfo);
 
 function saveEntryInfo(event) {
-  var currentEntry = {};
-  currentEntry.title = $entryTitle.value;
-  currentEntry.photoUrl = $photoUrl.value;
-  currentEntry.notes = $entryNotes.value;
-  currentEntry.id = data.nextEntryId;
+  var currentEntry = {
+    title: $entryTitle.value,
+    photoUrl: $photoUrl.value,
+    notes: $entryNotes.value,
+    entryId: data.nextEntryId
+  };
 
-  data.nextEntryId++;
   data.entries.push(currentEntry);
+  data.nextEntryId++;
 
   $formImage.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
 }
 
-function createEntry(entry) {
+function renderEntry(entry) {
   //  <li>
   //    <div class="row">
   //      <div class="column-half">
@@ -44,15 +47,15 @@ function createEntry(entry) {
 
   var $listItem = document.createElement('li');
   var $row = document.createElement('div');
-  $row.className('row');
+  $row.className = 'row';
   $listItem.appendChild($row);
   var $imgCol = document.createElement('div');
-  $imgCol.className('column-half');
+  $imgCol.className = 'column-half';
   $row.appendChild($imgCol);
   var $image = document.createElement('img');
   $imgCol.appendChild($image);
   var $textCol = document.createElement('div');
-  $textCol.className('column-half');
+  $textCol.className = 'column-half';
   $row.appendChild($textCol);
   var $entryHeader = document.createElement('h2');
   var $entryText = document.createElement('p');
@@ -63,8 +66,14 @@ function createEntry(entry) {
   $entryHeader.textContent = entry.title;
   $entryText.textContent = entry.notes;
 
-  var unorderedList = document.querySelector('.entryList');
-  unorderedList.appendChild($listItem);
+  return $listItem;
 }
 
-createEntry(data.entry[0]);
+var unorderedList = document.querySelector('.entryList');
+
+window.addEventListener('DOMContentLoaded', function () {
+  for (var i = 0; i < data.entries.length; i++) {
+    var newEntry = renderEntry(data.entries[i]);
+    unorderedList.appendChild(newEntry);
+  }
+});
