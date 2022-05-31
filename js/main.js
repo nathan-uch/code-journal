@@ -29,3 +29,8 @@ function saveEntryInfo(event) {
   $formImage.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
 }
+
+window.addEventListener('beforeunload', function () {
+  var JSONdata = JSON.stringify(data);
+  localStorage.setItem('code-journal', JSONdata);
+});

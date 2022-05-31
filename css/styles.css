@@ -8,13 +8,6 @@ h3 {
   margin: 0.25rem 0;
 }
 
-button {
-  font-family: inherit;
-  background-color: #e2af77;
-  color: white;
-  border: none;
-}
-
 /* HEADER */
 header {
   background: #e2af77;
@@ -54,10 +47,19 @@ textarea:focus {
 }
 
 .save-btn {
+  font-family: inherit;
+  background-color: #e2af77;
+  color: white;
+  border: none;
+  width: auto;
   float: right;
   padding: 3px 10px;
   border-radius: 3px;
   text-align: right;
+}
+
+.save-btn:active {
+  transition: none;
 }
 
 /* MAIN */
