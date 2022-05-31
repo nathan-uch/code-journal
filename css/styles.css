@@ -10,6 +10,7 @@ h3 {
 
 /* HEADER */
 header {
+  width: 100%;
   background: #e2af77;
   padding: 0.7rem 1rem;
 }
