@@ -10,7 +10,7 @@ h3 {
 
 .btn-style {
   font-family: inherit;
-  background-color: #e2af77;
+  background-color: #da964e;
   color: white;
   border: none;
   width: auto;
@@ -23,8 +23,18 @@ h3 {
 /* HEADER */
 header {
   width: 100%;
-  background: #e2af77;
+  background: #da964e;
   padding: 0.7rem 1rem;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.page-header > a {
+  margin-left: 30px;
 }
 
 /* NEW ENTRY FORM */
