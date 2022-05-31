@@ -20,6 +20,14 @@ h3 {
   text-align: right;
 }
 
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
 /* HEADER */
 header {
   width: 100%;
@@ -37,11 +45,11 @@ header {
   margin-left: 30px;
 }
 
-/* NEW ENTRY FORM */
-
-div[data-view="entry-form"] {
-  /* display: none; */
+ul.navbar > li {
+  margin: 0 20px;
 }
+
+/* NEW ENTRY FORM */
 
 h1 {
   margin-top: 0;

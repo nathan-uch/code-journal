@@ -21,12 +21,17 @@
   <header>
     <div class="container page-header">
       <h3>Code Journal</h3>
+      <ul class="navbar">
+        <li class="navbar-link">
+          <a href="#entries">Entries</a>
+        </li>
+      </ul>
     </div>
   </header>
   <main>
     <div class="container">
       <!-- FORM -->
-      <div data-view="entry-form">
+      <div data-view="entry-form" class="hidden">
         <form action="">
           <div class="row">
             <div class="column-full">
@@ -51,11 +56,11 @@
           </div>
         </form>
       </div>
-      <div data-view="entries">
+      <div data-view="entries" class="active" id="entries">
         <div class="row">
           <div class="column-full entries-header">
             <h1 class="entries-h1">Entries</h1>
-            <button type="button" class="btn-style">NEW</button>
+            <a href="#" class="btn-style new-entry-a">NEW</a>
           </div>
           <ul class="entryList">
           </ul>

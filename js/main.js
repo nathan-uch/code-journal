@@ -30,6 +30,10 @@ function saveEntryInfo(event) {
 
   $formImage.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
+
+  data.view = 'entries';
+  updateView(data.view);
+  loadEntries();
 }
 
 function renderEntry(entry) {
@@ -69,11 +73,39 @@ function renderEntry(entry) {
   return $listItem;
 }
 
-var unorderedList = document.querySelector('.entryList');
+var $unorderedList = document.querySelector('.entryList');
+window.addEventListener('DOMContentLoaded', loadEntries);
 
-window.addEventListener('DOMContentLoaded', function () {
+function loadEntries() {
   for (var i = 0; i < data.entries.length; i++) {
     var newEntry = renderEntry(data.entries[i]);
-    unorderedList.appendChild(newEntry);
+    $unorderedList.appendChild(newEntry);
+  }
+}
+
+var $newEntryBtn = document.querySelector('.new-entry-a');
+var $navbarLinks = document.querySelector('.navbar-link');
+var $formContainer = document.querySelector('[data-view="entry-form"]');
+var $entriesContainer = document.querySelector('[data-view="entries"]');
+
+function updateView(view) {
+  if (view === 'entry-form') {
+    $formContainer.className = 'active';
+    $entriesContainer.className = 'hidden';
+  } else if (view === 'entries') {
+    $formContainer.className = 'hidden';
+    $entriesContainer.className = 'active';
+  }
+}
+
+$newEntryBtn.addEventListener('click', function (event) {
+  data.view = 'entry-form';
+  updateView(data.view);
+});
+
+$navbarLinks.addEventListener('click', function (event) {
+  if (event.target.textContent === 'Entries') {
+    data.view = 'entries';
+    updateView(data.view);
   }
 });
