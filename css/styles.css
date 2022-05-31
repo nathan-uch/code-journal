@@ -8,6 +8,18 @@ h3 {
   margin: 0.25rem 0;
 }
 
+.btn-style {
+  font-family: inherit;
+  background-color: #e2af77;
+  color: white;
+  border: none;
+  width: auto;
+  float: right;
+  padding: 5px 15px;
+  border-radius: 3px;
+  text-align: right;
+}
+
 /* HEADER */
 header {
   width: 100%;
@@ -16,7 +28,12 @@ header {
 }
 
 /* NEW ENTRY FORM */
-h2 {
+
+div[data-view="entry-form"] {
+  display: none;
+}
+
+h1 {
   margin-top: 0;
 }
 
@@ -46,20 +63,24 @@ textarea:focus {
   border-radius: 3px;
 }
 
-.save-btn {
-  font-family: inherit;
-  background-color: #e2af77;
-  color: white;
-  border: none;
-  width: auto;
-  float: right;
-  padding: 5px 15px;
-  border-radius: 3px;
-  text-align: right;
-}
-
-.save-btn:active {
-  transition: none;
-}
-
 /* MAIN */
+.entries-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entries-h1 {
+  display: inline;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
