@@ -29,8 +29,3 @@ function saveEntryInfo(event) {
   $form.reset();
 
 }
-
-window.addEventListener('beforeunload', function () {
-  var JSONdata = JSON.stringify(data);
-  localStorage.setItem('code-journal', JSONdata);
-});
