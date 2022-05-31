@@ -33,7 +33,7 @@ function saveEntryInfo(event) {
 
   data.view = 'entries';
   updateView(data.view);
-  loadEntries();
+  loadEntry(currentEntry);
 }
 
 function renderEntry(entry) {
@@ -74,13 +74,19 @@ function renderEntry(entry) {
 }
 
 var $unorderedList = document.querySelector('.entryList');
-window.addEventListener('DOMContentLoaded', loadEntries);
+window.addEventListener('DOMContentLoaded', loadPreviousEntries);
 
-function loadEntries() {
+function loadPreviousEntries() {
   for (var i = 0; i < data.entries.length; i++) {
     var newEntry = renderEntry(data.entries[i]);
-    $unorderedList.appendChild(newEntry);
+    $unorderedList.prepend(newEntry);
   }
+  updateView(data.view);
+}
+
+function loadEntry(entry) {
+  var newEntry = renderEntry(entry);
+  $unorderedList.prepend(newEntry);
   updateView(data.view);
 }
 
