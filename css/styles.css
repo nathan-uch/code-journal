@@ -12,8 +12,6 @@ h3 {
 header {
   background: #e2af77;
   padding: 0.7rem 1rem;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 /* NEW ENTRY FORM */
@@ -26,6 +24,7 @@ input,
 textarea {
   width: 100%;
   margin: 0.2rem 0 1rem;
+  border-radius: 3px;
 }
 
 input,
@@ -53,7 +52,7 @@ textarea:focus {
   border: none;
   width: auto;
   float: right;
-  padding: 3px 10px;
+  padding: 5px 15px;
   border-radius: 3px;
   text-align: right;
 }
