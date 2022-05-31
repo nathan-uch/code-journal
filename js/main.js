@@ -81,6 +81,7 @@ function loadEntries() {
     var newEntry = renderEntry(data.entries[i]);
     $unorderedList.appendChild(newEntry);
   }
+  updateView(data.view);
 }
 
 var $newEntryBtn = document.querySelector('.new-entry-a');
