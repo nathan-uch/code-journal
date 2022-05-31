@@ -15,6 +15,5 @@ window.addEventListener('beforeunload', function () {
 var previousEntriesJSON = localStorage.getItem('code-journal');
 
 if (previousEntriesJSON !== null) {
-  data.entries = JSON.parse(previousEntriesJSON).entries;
-  data.view = JSON.parse(previousEntriesJSON).view;
+  data = JSON.parse(previousEntriesJSON);
 }
