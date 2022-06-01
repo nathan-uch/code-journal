@@ -52,6 +52,7 @@ function renderEntry(entry) {
 
   var $listItem = document.createElement('li');
   $listItem.className = 'entry-item';
+  $listItem.setAttribute('data-entry-id', entry.entryId);
   var $row = document.createElement('div');
   $row.className = 'row';
   $listItem.appendChild($row);
