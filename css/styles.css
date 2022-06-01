@@ -114,3 +114,7 @@ h2 {
   display: inline;
   margin: 0;
 }
+
+i {
+  float: right;
+}

@@ -83,7 +83,7 @@ function renderEntry(entry) {
   return $listItem;
 }
 
-var $unorderedList = document.querySelector('.entryList');
+var $unorderedList = document.querySelector('.entry-list');
 window.addEventListener('DOMContentLoaded', loadPreviousEntries);
 
 function loadPreviousEntries() {
@@ -126,3 +126,12 @@ $navbarLinks.addEventListener('click', function (event) {
     updateView(data.view);
   }
 });
+
+$unorderedList.addEventListener('click', editEntry);
+
+function editEntry(event) {
+  if (event.target.tagName === 'I') {
+    data.view = 'entry-form';
+    updateView(data.view);
+  }
+}
