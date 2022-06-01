@@ -37,7 +37,7 @@ function saveEntryInfo(event) {
 }
 
 function renderEntry(entry) {
-  //  <li>
+  //  <li class="entry-item" data-entry-id="entryId">
   //    <div class="row">
   //      <div class="column-half">
   //        <img>
@@ -127,11 +127,23 @@ $navbarLinks.addEventListener('click', function (event) {
   }
 });
 
-$unorderedList.addEventListener('click', editEntry);
+$unorderedList.addEventListener('click', findEditEntry);
 
-function editEntry(event) {
+function findEditEntry(event) {
   if (event.target.tagName === 'I') {
     data.view = 'entry-form';
     updateView(data.view);
+    for (var i = 0; i < data.entries.length; i++) {
+      if (event.target.dataset.entryId === data.entries[i].entryID) {
+        data.editing = data.entries[i];
+        editEntry(data.editing);
+      }
+    }
   }
+}
+
+function editEntry(entry) {
+  $photoUrl.value = entry.photoUrl;
+  $entryTitle.value = entry.title;
+  $entryNotes.value = entry.notes;
 }
