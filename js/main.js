@@ -44,12 +44,14 @@ function renderEntry(entry) {
   //      </div>
   //      <div class="column-half">
   //        <h2></h2>
+  //        <a><i></i></a>
   //        <p></p>
   //      </div>
   //    </div>
   //  </li>
 
   var $listItem = document.createElement('li');
+  $listItem.className = 'entry-item';
   var $row = document.createElement('div');
   $row.className = 'row';
   $listItem.appendChild($row);
@@ -62,8 +64,15 @@ function renderEntry(entry) {
   $textCol.className = 'column-half';
   $row.appendChild($textCol);
   var $entryHeader = document.createElement('h2');
+  var $editAnchor = document.createElement('a');
+  $editAnchor.setAttribute('href', '#');
+  $editAnchor.className = 'icon-anchor';
+  var $editIcon = document.createElement('i');
+  $editIcon.className = 'fa-solid fa-pen-to-square';
   var $entryText = document.createElement('p');
+  $editAnchor.appendChild($editIcon);
   $textCol.appendChild($entryHeader);
+  $textCol.appendChild($editAnchor);
   $textCol.appendChild($entryText);
 
   $image.setAttribute('src', entry.photoUrl);
