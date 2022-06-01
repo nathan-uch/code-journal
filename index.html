@@ -19,18 +19,23 @@
 <body>
   <!-- HEADER -->
   <header>
-    <div class="container">
+    <div class="container page-header">
       <h3>Code Journal</h3>
+      <ul class="navbar">
+        <li class="navbar-link">
+          <a href="#entries">Entries</a>
+        </li>
+      </ul>
     </div>
   </header>
   <main>
     <div class="container">
       <!-- FORM -->
-      <div data-view="entry-form">
+      <div data-view="entry-form" class="hidden">
         <form action="">
           <div class="row">
             <div class="column-full">
-              <h2>New Entry</h2>
+              <h1>New Entry</h1>
             </div>
             <div class="column-half">
               <img src="images/placeholder-image-square.jpg" alt="entry-photo" class="form-img">
@@ -46,10 +51,20 @@
             <div class="column-full">
               <label for="notes">Notes</label>
               <textarea rows="4" class="notes-text" id="notes" required="required"></textarea>
-              <input class="save-btn" type="submit" value="SAVE">
+              <input class="btn-style save-btn" type="submit" value="SAVE">
             </div>
           </div>
         </form>
+      </div>
+      <div data-view="entries" class="active" id="entries">
+        <div class="row">
+          <div class="column-full entries-header">
+            <h1 class="entries-h1">Entries</h1>
+            <a href="#" class="btn-style new-entry-a">NEW</a>
+          </div>
+          <ul class="entryList">
+          </ul>
+        </div>
       </div>
     </div>
   </main>

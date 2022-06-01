@@ -8,15 +8,56 @@ h3 {
   margin: 0.25rem 0;
 }
 
+.btn-style {
+  font-family: inherit;
+  background-color: #da964e;
+  color: white;
+  border: none;
+  width: auto;
+  float: right;
+  padding: 5px 15px;
+  border-radius: 3px;
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 /* HEADER */
 header {
   width: 100%;
-  background: #e2af77;
+  background: #da964e;
   padding: 0.7rem 1rem;
 }
 
+.page-header {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.page-header > a {
+  margin-left: 30px;
+}
+
+ul.navbar > li {
+  margin: 0 30px;
+}
+
 /* NEW ENTRY FORM */
-h2 {
+
+h1 {
   margin-top: 0;
 }
 
@@ -46,20 +87,28 @@ textarea:focus {
   border-radius: 3px;
 }
 
-.save-btn {
-  font-family: inherit;
-  background-color: #e2af77;
-  color: white;
+.save-btn:focus {
   border: none;
-  width: auto;
-  float: right;
-  padding: 5px 15px;
-  border-radius: 3px;
-  text-align: right;
-}
-
-.save-btn:active {
-  transition: none;
 }
 
 /* MAIN */
+.entries-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entries-h1 {
+  display: inline;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
