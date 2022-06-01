@@ -113,6 +113,7 @@ var $newEntryBtn = document.querySelector('.new-entry-a');
 var $navbarLinks = document.querySelector('.navbar-link');
 var $formContainer = document.querySelector('[data-view="entry-form"]');
 var $entriesContainer = document.querySelector('[data-view="entries"]');
+var $formHeader = document.querySelector('.form-header');
 
 function updateDataView(view) {
   if (view === 'entry-form') {
@@ -125,6 +126,7 @@ function updateDataView(view) {
 }
 
 $newEntryBtn.addEventListener('click', function (event) {
+  $formHeader.textContent = 'New Entry';
   data.editing = null;
   $formImage.setAttribute('src', 'images/placeholder-image-square.jpg');
   $form.reset();
@@ -154,6 +156,7 @@ function findEditEntry(event) {
 }
 
 function loadEditEntryPage(entry) {
+  $formHeader.textContent = 'Edit Entry';
   $photoUrl.value = entry.photoUrl;
   $entryTitle.value = entry.title;
   $entryNotes.value = entry.notes;
