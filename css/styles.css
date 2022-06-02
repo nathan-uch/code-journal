@@ -51,12 +51,36 @@ header {
   color: white;
 }
 
+.page-header > h3 {
+  min-width: 115px;
+}
+
+.navbar {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
 .navbar-link {
-  margin-left: 30px;
+  flex: 1 1 auto;
+  margin: 0 1.5rem;
 }
 
 .header-anchors:visited {
   color: white;
+}
+
+.navbar-search-box {
+  flex: 2 1 auto;
+}
+
+#search-entries {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 0;
 }
 
 /* FORM */
