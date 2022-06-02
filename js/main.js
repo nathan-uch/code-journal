@@ -15,6 +15,7 @@ var $deleteEntryBtn = document.querySelector('.delete-entry');
 var $modal = document.querySelector('.modal-container');
 var $cancelModal = document.querySelector('.cancel-modal');
 var $confirmModal = document.querySelector('.confirm-modal');
+var $searchBox = document.querySelector('#search-entries');
 
 window.addEventListener('DOMContentLoaded', loadPreviousEntries);
 $form.addEventListener('submit', saveEntryInfo);
@@ -61,6 +62,18 @@ $confirmModal.addEventListener('click', function () {
   }
 });
 
+$searchBox.addEventListener('input', function (event) {
+  var $currentTitles = document.querySelectorAll('.li-title');
+  for (var y = 0; y < $currentTitles.length; y++) {
+    if (event.target.value === '') {
+      $currentTitles[y].closest('li').className = 'entry-item';
+    }
+    if ($currentTitles[y].textContent.search(event.target.value) === -1) {
+      $currentTitles[y].closest('li').className = 'entry-item hidden';
+    }
+  }
+});
+
 function updatePhoto() {
   if ($photoUrl.value !== '') {
     $formImage.setAttribute('src', $photoUrl.value);
@@ -101,7 +114,7 @@ function renderEntry(entry) {
   //        <img>
   //      </div>
   //      <div class="column-half">
-  //        <h2></h2>
+  //        <h2 class="li-title"></h2>
   //        <a><i></i></a>
   //        <p></p>
   //      </div>
@@ -123,6 +136,7 @@ function renderEntry(entry) {
   $textCol.className = 'column-half';
   $row.appendChild($textCol);
   var $entryHeader = document.createElement('h2');
+  $entryHeader.className = 'li-title';
   var $editAnchor = document.createElement('a');
   $editAnchor.setAttribute('href', '#');
   $editAnchor.className = 'icon-anchor';
