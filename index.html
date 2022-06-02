@@ -51,11 +51,13 @@
             <div class="column-full">
               <label for="notes">Notes</label>
               <textarea rows="4" class="notes-text" id="notes" required="required"></textarea>
+              <a href="#" class="delete-entry hidden">Delete Entry</a>
               <input class="btn-style save-btn" type="submit" value="SAVE">
             </div>
           </div>
         </form>
       </div>
+      <!-- ENTRIES -->
       <div data-view="entries" class="active" id="entries">
         <div class="row">
           <div class="column-full entries-header">
@@ -67,7 +69,19 @@
         </div>
       </div>
     </div>
+    <!-- MODAL -->
   </main>
+  <div class="modal-container hidden">
+    <div class="row modal">
+      <div class="column-full modal-text">
+        <p>Are you sure you want to delete this entry?</p>
+      </div>
+      <div class="column-full modal-btns">
+        <button class="cancel-modal">CANCEL</button>
+        <button class="confirm-modal">CONFIRM</button>
+      </div>
+    </div>
+  </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
