@@ -122,7 +122,7 @@ function renderEntry(entry) {
   //      </div>
   //      <div class="column-half">
   //        <h2 class="li-title"></h2>
-  //        <a><i></i></a>
+  //        <a><i class="fa-solid fa-pen-to-square fa-xl"></i></a>
   //        <p></p>
   //      </div>
   //    </div>
@@ -148,7 +148,7 @@ function renderEntry(entry) {
   $editAnchor.setAttribute('href', '#');
   $editAnchor.className = 'icon-anchor';
   var $editIcon = document.createElement('i');
-  $editIcon.className = 'fa-solid fa-pen-to-square';
+  $editIcon.className = 'fa-solid fa-pen-to-square fa-xl';
   var $entryText = document.createElement('p');
   $editAnchor.appendChild($editIcon);
   $textCol.appendChild($entryHeader);
