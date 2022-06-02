@@ -68,7 +68,7 @@ $searchBox.addEventListener('input', function (event) {
     if (event.target.value === '') {
       $currentTitles[y].closest('li').className = 'entry-item';
     }
-    if ($currentTitles[y].textContent.search(event.target.value) === -1) {
+    if ($currentTitles[y].textContent.toLowerCase().search(event.target.value.toLowerCase()) === -1) {
       $currentTitles[y].closest('li').className = 'entry-item hidden';
     }
   }
