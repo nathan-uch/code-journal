@@ -173,10 +173,19 @@ var $modal = document.querySelector('.modal-container');
 var $cancelModal = document.querySelector('.cancel-modal');
 var $confirmModal = document.querySelector('.confirm-modal');
 
+$deleteEntryBtn.addEventListener('click', function () {
+  $modal.className = 'modal-container';
+});
+
 $cancelModal.addEventListener('click', function () {
   $modal.className = 'modal-container hidden';
 });
 
 $confirmModal.addEventListener('click', function () {
   $modal.className = 'modal-container hidden';
+  for (var u = 0; u < data.entries.length; u++) {
+    if (data.entries[u].entryId === data.editing.entryId) {
+      data.entries.splice(u, 1);
+    }
+  }
 });
