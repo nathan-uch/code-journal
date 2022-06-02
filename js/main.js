@@ -134,8 +134,11 @@ $newEntryBtn.addEventListener('click', function (event) {
   updateDataView(data.view);
 });
 
+var $deleteEntryBtn = document.querySelector('.delete-entry');
+
 $navbarLinks.addEventListener('click', function (event) {
   if (event.target.textContent === 'Entries') {
+    $deleteEntryBtn.className = 'delete-entry hidden';
     data.view = 'entries';
     updateDataView(data.view);
   }
@@ -157,6 +160,7 @@ function findEditEntry(event) {
 
 function loadEditEntryPage(entry) {
   $formHeader.textContent = 'Edit Entry';
+  $deleteEntryBtn.className = 'delete-entry';
   $photoUrl.value = entry.photoUrl;
   $entryTitle.value = entry.title;
   $entryNotes.value = entry.notes;

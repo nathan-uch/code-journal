@@ -59,7 +59,7 @@ header {
   color: white;
 }
 
-/* NEW ENTRY FORM */
+/* FORM */
 
 h1 {
   margin-top: 0;
@@ -93,6 +93,11 @@ textarea:focus {
 
 .save-btn:focus {
   border: none;
+}
+
+.delete-entry[href] {
+  color: red;
+  text-decoration: underline;
 }
 
 /* MAIN */
