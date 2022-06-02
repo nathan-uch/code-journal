@@ -168,3 +168,15 @@ function loadEditEntryPage(entry) {
   data.view = 'entry-form';
   updateDataView(data.view);
 }
+
+var $modal = document.querySelector('.modal-container');
+var $cancelModal = document.querySelector('.cancel-modal');
+var $confirmModal = document.querySelector('.confirm-modal');
+
+$cancelModal.addEventListener('click', function () {
+  $modal.className = 'modal-container hidden';
+});
+
+$confirmModal.addEventListener('click', function () {
+  $modal.className = 'modal-container hidden';
+});
