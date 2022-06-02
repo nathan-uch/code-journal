@@ -52,11 +52,11 @@ header {
 }
 
 .page-header > h3 {
-  min-width: 115px;
+  min-width: 140px;
 }
 
 .navbar {
-  width: 80%;
+  width: 83%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,6 +129,7 @@ textarea:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
 
 .entries-h1 {
@@ -145,6 +146,11 @@ ul {
 h2 {
   display: inline;
   margin: 0;
+}
+
+.empty-search {
+  font-size: 1.5rem;
+  margin: 25px 0;
 }
 
 i {

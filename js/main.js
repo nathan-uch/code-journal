@@ -16,6 +16,7 @@ var $modal = document.querySelector('.modal-container');
 var $cancelModal = document.querySelector('.cancel-modal');
 var $confirmModal = document.querySelector('.confirm-modal');
 var $searchBox = document.querySelector('#search-entries');
+var $emptySearchText = document.querySelector('.empty-search');
 
 window.addEventListener('DOMContentLoaded', loadPreviousEntries);
 $form.addEventListener('submit', saveEntryInfo);
@@ -64,12 +65,18 @@ $confirmModal.addEventListener('click', function () {
 
 $searchBox.addEventListener('input', function (event) {
   var $currentTitles = document.querySelectorAll('.li-title');
+  var notFound = 0;
   for (var y = 0; y < $currentTitles.length; y++) {
     if (event.target.value === '') {
       $currentTitles[y].closest('li').className = 'entry-item';
+      $emptySearchText.className = 'empty-search hidden';
     }
     if ($currentTitles[y].textContent.toLowerCase().search(event.target.value.toLowerCase()) === -1) {
       $currentTitles[y].closest('li').className = 'entry-item hidden';
+      notFound++;
+    }
+    if (notFound === $currentTitles.length) {
+      $emptySearchText.className = 'empty-search';
     }
   }
 });
