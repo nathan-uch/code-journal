@@ -150,21 +150,21 @@ function renderEntry(entry) {
   var $editIcon = document.createElement('i');
   $editIcon.className = 'fa-solid fa-pen-to-square fa-xl';
   var $entryText = document.createElement('p');
-  $editAnchor.appendChild($editIcon);
-  $textCol.appendChild($entryHeader);
-  $textCol.appendChild($editAnchor);
-  $textCol.appendChild($entryText);
 
   $image.setAttribute('src', entry.photoUrl);
   $entryHeader.textContent = entry.title;
   $entryText.textContent = entry.notes;
 
+  $editAnchor.appendChild($editIcon);
+  $textCol.appendChild($entryHeader);
+  $textCol.appendChild($editAnchor);
+  $textCol.appendChild($entryText);
   return $listItem;
 }
 
 function loadPreviousEntries() {
   for (var i = 0; i < data.entries.length; i++) {
-    var newEntry = (data.entries[i]);
+    var newEntry = (renderEntry(data.entries[i]));
     $unorderedList.prepend(newEntry);
   }
   updateDataView(data.view);
