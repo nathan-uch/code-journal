@@ -22,8 +22,7 @@ Code journal is a web application for journaling; creating and logging entries. 
 * User can search for entries
 
 ## Preview:
-![Kapture 2022-10-17 at 11 01 49](https://user-images.githubusercontent.com/68994507/196249989-4a0fbf58-3c8f-44fe-8642-75cbdf4b0179.gif)
-
+![Kapture 2022-10-17 at 11 01 49](https://user-images.githubusercontent.com/68994507/196250238-d115bf36-a49d-4dbd-b46e-28eb9d76f596.gif)
 
 ## Development:
 1. Clone git repository
