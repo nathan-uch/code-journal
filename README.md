@@ -27,7 +27,7 @@ Code journal is a web application for journaling; creating and logging entries. 
 1. Clone git repository
 ```shell
 git clone git@github.com:nathan-uch/code-journal.git
-cd 
+cd project_name
 ```
 2. Install dependencies with npm
 ```shell
